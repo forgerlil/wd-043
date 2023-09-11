@@ -14,6 +14,8 @@
 // console.log(firstCard);
 // console.dir(h1);
 
+/* ------------------------------------ */
+
 // Changing the style or classes of an element:
 // h1.style.color = 'red';
 // h1.style.backgroundColor = 'blue';
@@ -25,6 +27,8 @@
 // h1.classList.add('bg-amber-200', 'text-white');
 // h1.classList.remove('bg-amber-200', 'text-white');
 // h1.classList.toggle('bg-amber-200');
+
+/* ------------------------------------ */
 
 // Changing the content of an element
 // console.log(h1.innerHTML);
@@ -44,23 +48,31 @@
 // console.log(h1.innerText);
 // console.log(h1.textContent);
 
+/* ------------------------------------ */
+
+// Getting multiple elements
 const articles = document.getElementsByTagName('article');
 // const cards = document.getElementsByClassName('card');
+// const cardsWithQuerySelector = document.querySelectorAll('.card');
 
 // console.log('getting by tag', articles);
+// console.log('getting by class', cards);
+// console.log('getting by querySelectorAll', cardsWithQuerySelector);
+
+// cards.forEach((card) => {
+//   card.classList.toggle('bg-green-300');
+// }); // ❌
 
 // cardsWithQuerySelector.forEach((card) => {
 //   card.classList.toggle('bg-green-300');
-// });
+// }); // ✅
 
 // console.log('getting by querySelector', firstCard);
 
-// firstCard.style.backgroundColor = 'red';
-
 // HTMLCollection vs NodeList (live vs not-live)
-const cardsSection = document.getElementById('articlesSection');
-const cards = document.getElementsByClassName('card');
-const cardsWithQuerySelector = document.querySelectorAll('.card');
+// const cardsSection = document.getElementById('articlesSection');
+// const cards = document.getElementsByClassName('card');
+// const cardsWithQuerySelector = document.querySelectorAll('.card');
 
 // console.log('getting by querySelectorAll', cardsWithQuerySelector);
 // console.log('getting by class', cards);
@@ -72,13 +84,20 @@ const cardsWithQuerySelector = document.querySelectorAll('.card');
 
 // console.log(cards);
 
+/* ------------------------------------ */
+
 // Creating DOM with methods
 
-const addArticleBtn = document.querySelector('#createArticle');
+/**
+ * Function that takes one parent and multiple children, and appends to the parent all the children in order
+ * @param {HTMLElement} parent
+ * @param  {...HTMLElement} elements
+ * @returns undefined
+ */
+const appendElements = (parent, ...elements) =>
+  elements.forEach((element) => parent.appendChild(element));
 
-const appendElements = (parent, ...elements) => {
-  return elements.forEach((element) => parent.appendChild(element));
-};
+const addArticleBtn = document.querySelector('#createArticle');
 
 addArticleBtn.addEventListener('click', () => {
   const newArticle = document.createElement('article');
