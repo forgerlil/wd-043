@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <ul class="navbar bg-primary gap-6 pr-10 justify-end">
+      <li>Home</li>
+      <li>All Articles</li>
+      <li>About us</li>
+    </ul>
+    <h1 class="text-3xl text-center my-16">
+      Let's change this page with
+      <span role="img" aria-label="stars">✨</span>
+      <span style="visibility: hidden">Dom Manipulation</span>
+      <span role="img" aria-label="stars">✨</span>
+    </h1>
+    <button id="createArticle" class="btn btn-secondary block mx-auto mb-10">
+      Create new Article
+    </button>
+    <section id="articlesSection" class="flex flex-wrap gap-4 justify-center">
+      <article class="card w-96 bg-gray-900">
+        <img src="https://picsum.photos/400/300" alt="A random pretty image" />
+        <div class="card-body flex-col">
+          <h2 id="article-1-title" class="card-title">Featured Article</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+            voluptatum
+          </p>
+          <button class="btn btn-accent w-fit self-end">See more</button>
+        </div>
+      </article>
+      <article class="card w-96 bg-gray-900">
+        <img src="https://picsum.photos/400/300" alt="A random pretty image" />
+        <div class="card-body flex-col">
+          <h2 id="article-1-title" class="card-title">Featured Article</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+            voluptatum
+          </p>
+          <button class="btn btn-accent w-fit self-end">See more</button>
+        </div>
+      </article>
+    </section>
+    <!-- XSS Example -->
+    <!-- <form class="ml-6 my-10">
+      <input placeholder="Search..." type="text" id="searchBar" />
+      <button class="btn btn-secondary">Search</button>
+    </form>
+    <div class="ml-6 mb-16">
+      You searched by... <span id="searchResult"></span>
+    </div> -->
+    <script src="index.js"></script>
+  </body>
+</html>
