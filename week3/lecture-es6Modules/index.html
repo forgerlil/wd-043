@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Static Template</title>
+  </head>
+  <body>
+    <h1 class="text-6xl text-center my-10">ES6 Modules!</h1>
+    <main>
+      <section id="comments" class="mb-20">
+        <h2 class="text-2xl text-center mb-6">WD#043 comment section</h2>
+        <div class="flex justify-center gap-4 px-20">
+          <div
+            id="commentSection"
+            class="bg-indigo-100 h-52 w-[50ch] rounded text-black px-4 py-2 text-xl overflow-x-hidden"
+          ></div>
+          <button class="showPrompt btn btn-primary mb-4">Add a comment</button>
+          <button class="fakeComment btn btn-primary mb-4">
+            Fake a comment
+          </button>
+        </div>
+      </section>
+      <section id="rosterSection" class="flex flex-col items-center">
+        <div class="flex gap-6 items-center mb-10">
+          <h2 class="text-2xl text-center">WD#043 class list</h2>
+          <button class="loadUsers btn btn-primary">Show more students</button>
+        </div>
+        <div class="rosterListing text-2xl"></div>
+      </section>
+    </main>
+    <script src="index.js" type="module"></script>
+    <script>
+      // In strict mode, the following bad syntax will give out errors instead
+      // 'use strict';
+      heyhey = 'Sloppy mode here';
+      console.log(heyhey);
+
+      function sloppyFunction(param1, param1) {
+        console.log(param1, param1);
+      }
+
+      sloppyFunction();
+    </script>
+  </body>
+</html>
