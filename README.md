@@ -13,3 +13,4 @@ This is the repo for lectures and corrections for WD#043! :D
 
 ### Week 3
 - JS DOM Manipulation basic exercises (`JS DOM onClick`, `JS DOM Conditional onClick`, `JS DOM onKeyUp`, `JS DOM onSubmit`, `JS DOM CSS in JS`) https://codesandbox.io/s/js-dom-exercises-yzwf36?file=/index.js
+- JS Local Storage https://codesandbox.io/s/localstorage-g35khh
