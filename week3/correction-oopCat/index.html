@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>The oop cat</title>
+  </head>
+  <body
+    data-theme="winter"
+    class="h-screen flex flex-col justify-center items-center gap-10 px-4"
+  >
+    <section id="cat-select">
+      <h3 class="text-center text-2xl mb-8">Choose your destiny</h3>
+      <input
+        type="submit"
+        class="btn bg-emerald-500 hover:bg-emerald-600 text-white"
+        name="cat"
+        value="Rita"
+        id="Rita"
+      />
+      <input
+        type="submit"
+        class="btn bg-amber-500 hover:bg-amber-600 text-white mx-4"
+        name="cat"
+        value="Charlotte"
+        id="Charlotte"
+      />
+      <input
+        type="submit"
+        class="btn bg-red-500 hover:bg-red-600 text-white"
+        name="cat"
+        value="Jade"
+        id="Jade"
+      />
+    </section>
+  </body>
+  <script src="index.js" type="module"></script>
+</html>
