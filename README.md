@@ -17,3 +17,5 @@ This is the repo for lectures and corrections for WD#043! :D
 - JS DOM Manipulation basic exercises (`JS DOM onClick`, `JS DOM Conditional onClick`, `JS DOM onKeyUp`, `JS DOM onSubmit`, `JS DOM CSS in JS`) https://codesandbox.io/s/js-dom-exercises-yzwf36?file=/index.js
 - JS Local Storage https://codesandbox.io/s/localstorage-g35khh
 - JS OOP The Cat https://codesandbox.io/s/the-oop-cat-fvlskh?file=/index.js
+- ES6 Modules Basics https://codesandbox.io/s/es6-modules-basics-7tjfjv?file=/index.js
+- ES6 Modules The Diary https://codesandbox.io/s/03-es6-modules-the-diary-z5l8xw?file=/index.html
