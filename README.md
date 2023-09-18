@@ -19,3 +19,7 @@ This is the repo for lectures and corrections for WD#043! :D
 - JS OOP The Cat https://codesandbox.io/s/the-oop-cat-fvlskh?file=/index.js
 - ES6 Modules Basics https://codesandbox.io/s/es6-modules-basics-7tjfjv?file=/index.js
 - ES6 Modules The Diary https://codesandbox.io/s/03-es6-modules-the-diary-z5l8xw?file=/index.html
+
+### Week 4
+
+- React - Building an UI https://codesandbox.io/s/react-building-an-ui-jpyzsn?file=/src/App.js
