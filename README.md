@@ -23,3 +23,4 @@ This is the repo for lectures and corrections for WD#043! :D
 ### Week 4
 
 - React - Building an UI https://codesandbox.io/s/react-building-an-ui-jpyzsn?file=/src/App.js
+- React - Props https://codesandbox.io/s/react-props-corrected-n2yhjn?file=/src/App.js
