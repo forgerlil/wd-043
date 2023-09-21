@@ -26,3 +26,5 @@ This is the repo for lectures and corrections for WD#043! :D
 - React - Props https://codesandbox.io/s/react-props-corrected-n2yhjn?file=/src/App.js
 
 - React useState - The Lightbulb https://codesandbox.io/s/usestate-the-light-bulb-phdt2g?file=/src/App.js
+- React useState - Controlled Components https://codesandbox.io/s/react-controlled-elements-gsh6dd?file=/src/App.js
+- React useEffect - The Candle https://codesandbox.io/s/react-hooks-the-candle-g54yz3?file=/src/components/Candle.js
