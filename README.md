@@ -24,8 +24,11 @@ This is the repo for lectures and corrections for WD#043! :D
 
 - React - Building an UI https://codesandbox.io/s/react-building-an-ui-jpyzsn?file=/src/App.js
 - React - Props https://codesandbox.io/s/react-props-corrected-n2yhjn?file=/src/App.js
-
+- React - Events https://codesandbox.io/s/04-react-events-sw77fl
+- React - Conditional Rendering https://codesandbox.io/s/04-react-conditional-rendering-q75gpn?file=/src/components/SecretSantaChat.js
+- React - Dynamic Component Rendering https://codesandbox.io/s/04-react-dynamic-component-rendering-tln93x
 - React useState - The Lightbulb https://codesandbox.io/s/usestate-the-light-bulb-phdt2g?file=/src/App.js
 - React useState - Controlled Components https://codesandbox.io/s/react-controlled-elements-gsh6dd?file=/src/App.js
+- Reach useState - Make it Count https://codesandbox.io/s/react-hooks-usestate-make-it-count-forked-wztw9t
 - React useEffect - The Candle https://codesandbox.io/s/react-hooks-the-candle-g54yz3?file=/src/components/Candle.js
 - React Libraries - Tabs and Maps https://codesandbox.io/s/react-libraries-tabs-and-maps-tyrylz?file=/src/App.js
