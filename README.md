@@ -28,3 +28,4 @@ This is the repo for lectures and corrections for WD#043! :D
 - React useState - The Lightbulb https://codesandbox.io/s/usestate-the-light-bulb-phdt2g?file=/src/App.js
 - React useState - Controlled Components https://codesandbox.io/s/react-controlled-elements-gsh6dd?file=/src/App.js
 - React useEffect - The Candle https://codesandbox.io/s/react-hooks-the-candle-g54yz3?file=/src/components/Candle.js
+- React Libraries - Tabs and Maps https://codesandbox.io/s/react-libraries-tabs-and-maps-tyrylz?file=/src/App.js
