@@ -32,3 +32,6 @@ This is the repo for lectures and corrections for WD#043! :D
 - Reach useState - Make it Count https://codesandbox.io/s/react-hooks-usestate-make-it-count-forked-wztw9t
 - React useEffect - The Candle https://codesandbox.io/s/react-hooks-the-candle-g54yz3?file=/src/components/Candle.js
 - React Libraries - Tabs and Maps https://codesandbox.io/s/react-libraries-tabs-and-maps-tyrylz?file=/src/App.js
+
+### Week 5
+- React Metronome https://codesandbox.io/s/react-metronome-ys2pz7?file=/src/components/Metronome.js
