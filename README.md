@@ -35,3 +35,5 @@ This is the repo for lectures and corrections for WD#043! :D
 
 ### Week 5
 - React Metronome https://codesandbox.io/s/react-metronome-ys2pz7?file=/src/components/Metronome.js
+- JS Fetch Amazing Users https://codesandbox.io/s/rest-api-training-wbs-8pp929
+- React Ron Swanson https://codesandbox.io/s/ron-swanson-8ch2mx?file=/src/App.js
