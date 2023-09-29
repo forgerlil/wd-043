@@ -39,3 +39,4 @@ This is the repo for lectures and corrections for WD#043! :D
 - React Ron Swanson https://codesandbox.io/s/ron-swanson-8ch2mx?file=/src/App.js
 - React Recap https://codesandbox.io/s/react-recap-grzspc?file=/src/App.js
 - JS POST requests https://codesandbox.io/s/posts-requests-react-form-gl586v?file=/src/App.js
+- React Typeform https://codesandbox.io/s/react-typeform-k3sccn?file=/src/App.js
