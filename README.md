@@ -4,7 +4,14 @@ This is the repo for lectures and corrections for WD#043! :D
 
 ## External links ➡️ for corrections/Codesandboxes 📦✅ :
 
-### Week 2
+Click to scroll down to the relevant week 👇
+- [Week 2 - JS Basics](#week-2---js-basics)
+- [Week 3 - DOM Manipulation & OOP](#week-3---dom-manipulation--oop)
+- [Week 4 - React Intro, useState & useEffect](#week-4---react-intro-usestate--useeffect)
+- [Week 5 - APIs + Fetch & Scrum](#week-5---apis--fetch--scrum)
+- [Week 6 - React Router & Martech](#week-6---react-router--martech)
+
+### Week 2 - JS Basics
 
 - JS Basics corrections part 1 (`JS Scope`, `JS Operator`, `JS Conditions if/else`, `JS Conditions Switch`, `JS Date`) https://codesandbox.io/s/js-basics-corrections-snnwpm
 - JS Basics corrections part 2 (`JS Array init`, `JS Array sort`, `JS Loops for`, `JS Loops forEach`) https://gist.github.com/forgerlil/46ce6e189aae24b2dc53d9e2ac4cf020
@@ -12,7 +19,7 @@ This is the repo for lectures and corrections for WD#043! :D
 - JS Functions part 2 (`Fibonacci`) https://gist.github.com/forgerlil/427a82db0534dfc3b5fd70a06bfb7004
 - JS Array Cardio Correction (smaller version): https://codesandbox.io/s/array-cardio-01-hr4rgt?file=/src/index.js
 
-### Week 3
+### Week 3 - DOM Manipulation & OOP
 
 - JS DOM Manipulation basic exercises (`JS DOM onClick`, `JS DOM Conditional onClick`, `JS DOM onKeyUp`, `JS DOM onSubmit`, `JS DOM CSS in JS`) https://codesandbox.io/s/js-dom-exercises-yzwf36?file=/index.js
 - JS Local Storage https://codesandbox.io/s/localstorage-g35khh
@@ -20,7 +27,7 @@ This is the repo for lectures and corrections for WD#043! :D
 - ES6 Modules Basics https://codesandbox.io/s/es6-modules-basics-7tjfjv?file=/index.js
 - ES6 Modules The Diary https://codesandbox.io/s/03-es6-modules-the-diary-z5l8xw?file=/index.html
 
-### Week 4
+### Week 4 - React Intro, useState & useEffect
 
 - React - Building an UI https://codesandbox.io/s/react-building-an-ui-jpyzsn?file=/src/App.js
 - React - Props https://codesandbox.io/s/react-props-corrected-n2yhjn?file=/src/App.js
@@ -33,7 +40,7 @@ This is the repo for lectures and corrections for WD#043! :D
 - React useEffect - The Candle https://codesandbox.io/s/react-hooks-the-candle-g54yz3?file=/src/components/Candle.js
 - React Libraries - Tabs and Maps https://codesandbox.io/s/react-libraries-tabs-and-maps-tyrylz?file=/src/App.js
 
-### Week 5
+### Week 5 - APIs + Fetch & Scrum
 - React Metronome https://codesandbox.io/s/react-metronome-ys2pz7?file=/src/components/Metronome.js
 - JS Fetch Amazing Users https://codesandbox.io/s/rest-api-training-wbs-8pp929
 - React Ron Swanson https://codesandbox.io/s/ron-swanson-8ch2mx?file=/src/App.js
@@ -41,7 +48,7 @@ This is the repo for lectures and corrections for WD#043! :D
 - JS POST requests https://codesandbox.io/s/posts-requests-react-form-gl586v?file=/src/App.js
 - React Typeform https://codesandbox.io/s/react-typeform-k3sccn?file=/src/App.js
 
-### Week 6
+### Week 6 - React Router & Martech
 - React Router Basics https://codesandbox.io/s/react-router-basic-v6-2vl4xj
 - React Router Links https://codesandbox.io/s/react-router-links-v6-xgqydl?file=/src/App.js
 - React Router Dynamic https://codesandbox.io/s/react-router-dynamic-v6-3pkckg?file=/src/App.js
