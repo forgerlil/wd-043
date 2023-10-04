@@ -40,3 +40,8 @@ This is the repo for lectures and corrections for WD#043! :D
 - React Recap https://codesandbox.io/s/react-recap-grzspc?file=/src/App.js
 - JS POST requests https://codesandbox.io/s/posts-requests-react-form-gl586v?file=/src/App.js
 - React Typeform https://codesandbox.io/s/react-typeform-k3sccn?file=/src/App.js
+
+### Week 6
+- React Router Basics https://codesandbox.io/s/react-router-basic-v6-2vl4xj
+- React Router Links https://codesandbox.io/s/react-router-links-v6-xgqydl?file=/src/App.js
+- React Router Dynamic https://codesandbox.io/s/react-router-dynamic-v6-3pkckg?file=/src/App.js
