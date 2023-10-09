@@ -102,6 +102,18 @@ const App = () => {
     }
   };
 
+  /**
+   * This function handles resetting the form and image.
+   * @returns undefined
+   */
+  const handleReset = () => {
+    setDisplayedMeme(allMemes[currentMeme]);
+    setMemeText({
+      topText: '',
+      bottomText: '',
+    });
+  };
+
   if (loading) return <Loading />;
 
   if (error) return <Error />;
@@ -180,6 +192,9 @@ const App = () => {
               onClick={() => handleSave(memeDiv.current)}
             >
               Save
+            </button>
+            <button className='btn btn-warning' onClick={handleReset}>
+              Reset
             </button>
           </div>
         </div>
