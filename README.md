@@ -65,6 +65,7 @@ Click to scroll down to the relevant week 👇
 - React Router Dynamic https://codesandbox.io/s/react-router-dynamic-v6-3pkckg?file=/src/App.js
 
 ## Week 7 - SQL
+![image](https://github.com/forgerlil/wd-043/assets/81853712/56dc919b-1679-4701-a040-375eab57b6e5)
 
 ## Week 8 - Node & Express
 
