@@ -63,11 +63,13 @@ Click to scroll down to the relevant week 👇
 - React Router Basics https://codesandbox.io/s/react-router-basic-v6-2vl4xj
 - React Router Links https://codesandbox.io/s/react-router-links-v6-xgqydl?file=/src/App.js
 - React Router Dynamic https://codesandbox.io/s/react-router-dynamic-v6-3pkckg?file=/src/App.js
+- React Router Full https://codesandbox.io/s/react-routing-full-exercise-hdp93s?file=/src/App.js
 
 ## Week 7 - SQL
 ![image](https://github.com/forgerlil/wd-043/assets/81853712/56dc919b-1679-4701-a040-375eab57b6e5)
 
 ## Week 8 - Node & Express
+![image](https://github.com/forgerlil/wd-043/assets/81853712/b27f38bf-bbf7-4489-9323-a80758a31b66)
 
 ## Week 9 - Node + Postgresql & Middlewares
 
