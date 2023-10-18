@@ -1,0 +1,19 @@
+{
+  "name": "lecture-intronode",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "fs": "node fileSystem.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Lilian",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
