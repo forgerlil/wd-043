@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Wishlist</title>
+  </head>
+  <body>
+    <h1>My travel wishlist</h1>
+    <ul>
+      <% data.forEach((country) => { %>
+        <li>
+          <strong><%= country.name %></strong>
+        </li>
+        <%= country.alpha2Code %>
+        <br />
+        <%= country.alpha3Code %>
+        <br />
+        Have you visited this country? 
+        <%= country.visited ? 'Yes' : 'No' %>
+        <br />
+        <br />
+      <% }); %>
+    </ul>
+
+    <form method="POST" action="/api/countries">
+        <legend>Add a new country to your wishlist</legend>
+        <label for="name">Country's name</label>
+        <input type="text" name="name" id="name" />
+        <br />
+        
+        <label for="alpha2Code">Country's alpha2Code</label>
+        <input type="text" name="alpha2Code" id="alpha2Code" />
+        <br />
+        <label for="alpha3Code">Country's alpha3Code</label>
+        <input type="text" name="alpha3Code" id="alpha3Code" />
+        <br />
+          <p>Have you visited this country before?</p>
+          <input type="radio" name="visited" id="visited" value="true">Yes</input>
+          <input type="radio" name="visited" id="visited" value="false">No</input>
+        <br />
+        <button type="submit">Add country</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
