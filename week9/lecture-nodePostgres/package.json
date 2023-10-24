@@ -1,0 +1,21 @@
+{
+  "name": "lecture-nodepostgres",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r dotenv/config index.js dotenv_config_path=./.env.local",
+    "dev": "nodemon -r dotenv/config index.js dotenv_config_path=./.env.local"
+  },
+  "keywords": [],
+  "author": "Lilian",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
