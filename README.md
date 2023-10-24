@@ -72,6 +72,7 @@ Click to scroll down to the relevant week 👇
 ![image](https://github.com/forgerlil/wd-043/assets/81853712/b27f38bf-bbf7-4489-9323-a80758a31b66)
 
 ## Week 9 - Node + Postgresql & Middlewares
+![image](https://github.com/forgerlil/wd-043/assets/81853712/0c72c66c-477f-4079-8698-8feeca084b3b)
 
 ## Week 10 - MongoDB & Mongoose
 
