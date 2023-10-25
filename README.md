@@ -74,6 +74,10 @@ Click to scroll down to the relevant week 👇
 ## Week 9 - Node + Postgresql & Middlewares
 ![image](https://github.com/forgerlil/wd-043/assets/81853712/0c72c66c-477f-4079-8698-8feeca084b3b)
 
+- Fullstack repository: https://github.com/forgerlil/duckPondFullstack
+- Deployed backend URL: https://duck-pond-server.onrender.com/
+- Deployed frontend URL: https://duck-pond.netlify.app/
+
 ## Week 10 - MongoDB & Mongoose
 
 ## Week 11 - JWT and Authentication
