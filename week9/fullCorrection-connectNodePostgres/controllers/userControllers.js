@@ -40,28 +40,21 @@ const getOrdersFromUser = async (req, res) => {
   try {
     const { id } = req.params;
 
-    // We can start with two queries, to find a user first (and output an error if the user
-    // doesn't exist), and then find orders (and output an error if the user has no orders).
-    const findUser = await pool.query('SELECT * FROM users WHERE user.id=$1;', [
-      id,
-    ]);
-    if (!findUser.rows.length) throw new Error('User not found');
-
-    const findOrders = await pool.query(
-      'SELECT * FROM orders WHERE user_id=$1;',
-      [id]
-    );
-    if (!findOrders.rows.length)
-      throw new Error('User has not placed any orders');
-
-    // With a more complex query we can join both tables and have all orders
-    // nicely packed as objects in an array.
+    // We join users with the orders table, with a few functions to format the data.
     const {
       rows: [userWithOrders],
     } = await pool.query(
-      'SELECT users.*, array_agg(to_json(orders.*)) as orders FROM users JOIN orders ON users.id=orders.user_id WHERE users.id=$1 GROUP BY users.id;',
+      'SELECT users.*, array_agg(to_json(orders.*)) as orders FROM users LEFT JOIN orders ON users.id=orders.user_id WHERE users.id=$1 GROUP BY users.id;',
       [id]
     );
+
+    // If the query doesn't retrieve results, we output an error as the user with that id doesn't exist.
+    if (!userWithOrders)
+      return res.status(404).json({ error: 'User could not be found' });
+
+    // If user exists but has no orders, we dish out an error as well.
+    if (!userWithOrders.orders[0])
+      return res.status(404).json({ error: 'User has not placed any orders' });
 
     return res.json(userWithOrders);
   } catch (error) {
