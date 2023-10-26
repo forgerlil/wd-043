@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>File Uploading with Multer</title>
+  </head>
+  <body>
+    <form
+      method="POST"
+      action="/upload-profile-pic"
+      enctype="multipart/form-data"
+    >
+      <div>
+        <label for="profile_pic">Select your profile picture:</label>
+        <input type="file" id="profile_pic" name="profile_pic" />
+      </div>
+      <div>
+        <input type="submit" value="Upload" />
+      </div>
+    </form>
+  </body>
+</html>
