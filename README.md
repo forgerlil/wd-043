@@ -79,5 +79,6 @@ Click to scroll down to the relevant week 👇
 - Deployed frontend URL: https://duck-pond.netlify.app/
 
 ## Week 10 - MongoDB & Mongoose
+![image](https://github.com/forgerlil/wd-043/assets/81853712/dcbf7c5b-105c-46c3-895f-61363c3ff31e)
 
 ## Week 11 - JWT and Authentication
