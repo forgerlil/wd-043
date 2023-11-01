@@ -1,4 +1,5 @@
 import ErrorStatus from '../utils/errorStatus.js';
+import chalkLog from '../lib/chalkColors.js';
 
 const allOwners = async (req, res, next) => {
   try {
@@ -24,20 +25,4 @@ const createOwner = async (req, res, next) => {
   }
 };
 
-const editOwner = async (req, res, next) => {
-  try {
-    return res.json({});
-  } catch (error) {
-    next(error);
-  }
-};
-
-const deleteOwner = async (req, res, next) => {
-  try {
-    return res.json({});
-  } catch (error) {
-    next(error);
-  }
-};
-
-export { allOwners, oneOwner, createOwner, editOwner, deleteOwner };
+export { allOwners, oneOwner, createOwner };

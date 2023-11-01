@@ -5,17 +5,19 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon -r dotenv/config index.js dotenv_config_path=./.env/local"
+    "start": "node index.js",
+    "dev": "nodemon -r dotenv/config index.js dotenv_config_path=./.env.local"
   },
   "keywords": [],
   "author": "Lilian",
   "license": "ISC",
   "dependencies": {
     "chalk": "^5.3.0",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mongodb": "^6.2.0"
   },
   "devDependencies": {
+    "dotenv": "^16.3.1",
     "nodemon": "^3.0.1"
   }
 }

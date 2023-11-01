@@ -1,4 +1,5 @@
 import ErrorStatus from '../utils/errorStatus.js';
+import chalkLog from '../lib/chalkColors.js';
 
 const allDucks = async (req, res, next) => {
   try {
