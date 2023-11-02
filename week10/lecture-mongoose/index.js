@@ -1,4 +1,5 @@
 import express from 'express';
+import './db/mongooseClient.js';
 import ownerRouter from './routes/ownerRoutes.js';
 import duckRouter from './routes/duckRoutes.js';
 import errorHandler from './middlewares/errorHandler.js';

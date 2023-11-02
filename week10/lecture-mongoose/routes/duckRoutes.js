@@ -5,6 +5,7 @@ import {
   createDuck,
   editDuck,
   deleteDuck,
+  findDucksFromOwner,
 } from '../controllers/duckControllers.js';
 
 const duckRouter = express.Router();
@@ -15,5 +16,6 @@ duckRouter
   .get(oneDuck)
   .put(express.json(), editDuck)
   .delete(deleteDuck);
+duckRouter.get('/owner/:id', findDucksFromOwner);
 
 export default duckRouter;
