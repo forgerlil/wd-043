@@ -1,17 +1,14 @@
 import { useNavigate } from 'react-router-dom';
 import { CartList } from '../components';
+import { useAppContext } from '../context/AppContext';
 
-const Overview = ({
-  cart,
-  firstName,
-  lastName,
-  address,
-  zip,
-  city,
-  shipping,
-  payment,
-}) => {
+const Overview = () => {
   const navigate = useNavigate();
+
+  const {
+    cart,
+    checkout: { firstName, lastName, address, zip, city, shipping, payment },
+  } = useAppContext();
 
   const calculateCart = cart.reduce((acc, curr) => {
     return curr.onSale

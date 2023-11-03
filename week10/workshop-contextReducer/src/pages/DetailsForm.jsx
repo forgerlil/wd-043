@@ -1,14 +1,12 @@
 import { useNavigate } from 'react-router-dom';
+import { useAppContext } from '../context/AppContext';
 
-const DetailsForm = ({
-  firstName,
-  lastName,
-  address,
-  zip,
-  city,
-  setCheckout,
-}) => {
+const DetailsForm = () => {
   const navigate = useNavigate();
+  const {
+    checkout: { firstName, lastName, address, zip, city },
+    setCheckout,
+  } = useAppContext();
 
   const submitDetails = (e) => {
     e.preventDefault();

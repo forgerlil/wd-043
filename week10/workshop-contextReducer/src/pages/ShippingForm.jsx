@@ -7,9 +7,15 @@ import {
   FaCcApplePay,
   FaCreditCard,
 } from 'react-icons/fa';
+import { useAppContext } from '../context/AppContext';
 
-const ShippingForm = ({ shipping, payment, setCheckout }) => {
+const ShippingForm = () => {
   const navigate = useNavigate();
+
+  const {
+    checkout: { shipping, payment },
+    setCheckout,
+  } = useAppContext();
 
   const selection = (e) =>
     setCheckout((prev) => ({ ...prev, [e.target.name]: e.target.value }));

@@ -1,8 +1,10 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { FaHome, FaShoppingCart, FaUserAlt } from 'react-icons/fa';
+import { useAppContext } from '../context/AppContext';
 
-const NavBar = ({ cart }) => {
+const NavBar = () => {
   const navigate = useNavigate();
+  const { cart } = useAppContext();
 
   const calculateCart =
     cart &&
@@ -21,7 +23,7 @@ const NavBar = ({ cart }) => {
           alt='no drill logo'
           onClick={() => navigate('/')}
         />
-        <div className='text-3xl font-semibold'>Putting in Context</div>
+        <div className='text-3xl font-semibold'>Placing into Context</div>
       </div>
       <div className='flex gap-4'>
         <Link to='/'>

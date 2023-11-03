@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Product } from '../components';
+import { useAppContext } from '../context/AppContext';
 
-const Home = ({ products, cart, setCart }) => {
+const Home = () => {
   const [categories, setCategories] = useState(null);
+  const { products } = useAppContext();
 
   useEffect(() => {
     products &&
@@ -140,12 +142,7 @@ const Home = ({ products, cart, setCart }) => {
           >
             {products ? (
               products.map((product) => (
-                <Product
-                  key={crypto.randomUUID()}
-                  product={product}
-                  cart={cart}
-                  setCart={setCart}
-                />
+                <Product key={crypto.randomUUID()} product={product} />
               ))
             ) : (
               <span className='loading loading-spinner w-32 block mx-auto mt-20 mb-72'></span>

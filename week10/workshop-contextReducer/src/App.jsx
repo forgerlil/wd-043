@@ -10,26 +10,8 @@ import {
   Overview,
   ShippingForm,
 } from './pages';
-import { useState, useEffect } from 'react';
-import { getProducts } from './utils/getProducts';
 
-export default function App() {
-  const [products, setProducts] = useState(null);
-  const [cart, setCart] = useState([]);
-  const [checkout, setCheckout] = useState({
-    firstName: '',
-    lastName: '',
-    address: '',
-    zip: '',
-    city: '',
-    shipping: 'DHL',
-    payment: 'Credit_Card',
-  });
-
-  useEffect(() => {
-    getProducts().then((fetchedProducts) => setProducts(fetchedProducts));
-  }, []);
-
+const App = () => {
   return (
     <>
       <Routes>
@@ -47,7 +29,9 @@ export default function App() {
       </Routes>
     </>
   );
-}
+};
+
+export default App;
 
 // Starting point/with context
 
@@ -74,9 +58,9 @@ export default function App() {
   <Route path='/' element={<MainLayout cart={cart} />}>
     <Route
       index
-      element={<Home products={products} cart={cart} setCart={setCart} />}
+      element={<Home products={products} cart={cart} cartDispatch={cartDispatch} />}
     />
-    <Route path='cart' element={<Cart cart={cart} setCart={setCart} />} />
+    <Route path='cart' element={<Cart cart={cart} cartDispatch={cartDispatch} />} />
     <Route path='checkout' element={<CheckoutLayout cart={cart} />}>
       <Route
         index
@@ -94,7 +78,7 @@ export default function App() {
         path='confirmation'
         element={
           <OrderConfirmation
-            setCart={setCart}
+            cartDispatch={cartDispatch}
               setCheckout={setCheckout}
           />
         }

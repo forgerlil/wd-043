@@ -1,39 +1,15 @@
 import { useState } from 'react';
 import { FaCartPlus } from 'react-icons/fa';
+import { useAppContext } from '../context/AppContext';
 
-const Product = ({
-  product,
-  product: { id, title, image, price },
-  cart,
-  setCart,
-}) => {
+const Product = ({ product, product: { id, title, image, price } }) => {
   const [amount, setAmount] = useState(1);
   const [onSale] = useState(price > 100 ? true : false);
 
-  const putInCart = (id, product) => {
-    const copyCart = [...cart];
-    const findinCart = copyCart.findIndex((product) => product.id === id);
-    if (findinCart === -1)
-      copyCart.push({ ...product, qty: amount, onSale: onSale });
-    else
-      copyCart[findinCart] = {
-        ...product,
-        qty: cart[findinCart].qty + amount,
-        onSale: onSale,
-      };
-    return setCart(copyCart);
-  };
+  const { cartDispatch } = useAppContext();
 
   return (
-    // <div className="card-body">
-    //   <h2 >Life hack</h2>
-    //   <p>How to park your car at your garage?</p>
-    //   <div className="card-actions justify-end">
-    //     <button className="btn btn-primary">Learn now!</button>
-    //   </div>
-    // </div>
-
-    <div className='card w-96 glass overflow-hidden justify-end'>
+    <div className='card w-48 md:w-60 lg:w-96 glass overflow-hidden justify-end'>
       {onSale && (
         <p className='absolute right-4 top-4 px-4 py-2 text-white font-semibold text-xl rounded-xl bg-accent'>
           10% off!
@@ -76,8 +52,18 @@ const Product = ({
             </button>
           </div>
           <button
-            className='btn btn-secondary'
-            onClick={() => putInCart(id, product)}
+            className='btn btn-secondary ml-4'
+            onClick={() =>
+              cartDispatch({
+                type: 'addToCart',
+                payload: {
+                  id,
+                  product,
+                  amount,
+                  onSale,
+                },
+              })
+            }
           >
             <FaCartPlus size={20} />
           </button>

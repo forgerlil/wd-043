@@ -1,14 +1,17 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAppContext } from '../context/AppContext';
 
-const OrderConfirmation = ({ setCart, setCheckout }) => {
+const OrderConfirmation = () => {
   const [paid, setPaid] = useState(false);
   const navigate = useNavigate();
+
+  const { cartDispatch, setCheckout } = useAppContext();
 
   useEffect(() => {
     const timeout = setTimeout(() => setPaid(true), 2500);
     return () => {
-      setCart([]);
+      cartDispatch({ type: 'clearCart' });
       setCheckout({
         firstName: '',
         lastName: '',

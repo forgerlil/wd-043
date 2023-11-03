@@ -1,8 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 import { CartList } from '../components';
+import { useAppContext } from '../context/AppContext';
 
-const Cart = ({ cart, setCart }) => {
+const Cart = () => {
   const navigate = useNavigate();
+  const { cart } = useAppContext();
 
   return (
     <main className='flex flex-col items-center h-[55vh]'>
@@ -10,14 +12,7 @@ const Cart = ({ cart, setCart }) => {
         Your shopping cart
       </h1>
       {cart.length ? (
-        cart.map((item) => (
-          <CartList
-            key={crypto.randomUUID()}
-            {...item}
-            cart={cart}
-            setCart={setCart}
-          />
-        ))
+        cart.map((item) => <CartList key={crypto.randomUUID()} {...item} />)
       ) : (
         <p className='text-xl mt-20 mb-10 mx-8'>Your cart is currently empty</p>
       )}
