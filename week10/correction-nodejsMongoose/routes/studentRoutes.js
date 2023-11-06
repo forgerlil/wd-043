@@ -7,7 +7,10 @@ import {
 
 const studentRouter = express.Router();
 
-studentRouter.route('/').get(allStudents).post(express.json(), createStudent);
-studentRouter.route('/:id').put(express.json(), editStudents);
+studentRouter
+  .route('/')
+  .get(allStudents)
+  .post(express.json(), createStudent)
+  .put(express.json(), editStudents);
 
 export default studentRouter;

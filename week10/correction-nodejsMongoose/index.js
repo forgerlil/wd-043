@@ -1,6 +1,7 @@
 import express from 'express';
 import studentRouter from './routes/studentRoutes.js';
 import errorHandler from './middlewares/errorHandler.js';
+import './db/cjsClient.cjs';
 
 const app = express();
 const port = process.env.PORT || 8000;
