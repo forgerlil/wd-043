@@ -82,3 +82,4 @@ Click to scroll down to the relevant week 👇
 ![image](https://github.com/forgerlil/wd-043/assets/81853712/dcbf7c5b-105c-46c3-895f-61363c3ff31e)
 
 ## Week 11 - JWT and Authentication
+![image](https://github.com/forgerlil/wd-043/assets/81853712/71bb8875-c876-4403-8c2c-c31c1e79c41e)
