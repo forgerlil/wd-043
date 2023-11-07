@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Provide your token</h1>
+    <p>
+      Hello! Please add your token here for us to check if it's the real thing.
+      You got a token in the headers of your response!
+    </p>
+    <form action="checkJWT" method="POST">
+      <label>
+        Token: <input type="text" name="token" placeholder="Token" />
+      </label>
+      <br />
+      <button type="submit">Validate token</button>
+    </form>
+  </body>
+</html>
