@@ -32,8 +32,9 @@ const ownerSchema = new Schema(
     password: {
       type: String,
       required: true,
+      select: false,
       match: [
-        /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,20}$/,
+        /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{50,60}$/,
         'must contain at least one uppercase letter, one lowercase letter, one number and be between 8 and 20 characters long',
       ],
     },

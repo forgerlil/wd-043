@@ -7,15 +7,19 @@ import {
   deleteDuck,
   findDucksFromOwner,
 } from '../controllers/duckControllers.js';
+import verifyToken from '../middlewares/verifyToken.js';
 
 const duckRouter = express.Router();
 
-duckRouter.route('/').get(allDucks).post(express.json(), createDuck);
+duckRouter
+  .route('/')
+  .get(allDucks)
+  .post(express.json(), verifyToken, createDuck);
 duckRouter
   .route('/:id')
   .get(oneDuck)
-  .put(express.json(), editDuck)
-  .delete(deleteDuck);
+  .put(express.json(), verifyToken, editDuck)
+  .delete(verifyToken, deleteDuck);
 duckRouter.get('/owner/:id', findDucksFromOwner);
 
 export default duckRouter;
