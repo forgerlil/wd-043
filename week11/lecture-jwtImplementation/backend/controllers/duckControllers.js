@@ -51,7 +51,7 @@ const createDuck = async (req, res, next) => {
       owner,
     });
 
-    return res.json(await newDuck.populate('owner'));
+    return res.status(201).json(await newDuck.populate('owner'));
   } catch (error) {
     next(error);
   }
