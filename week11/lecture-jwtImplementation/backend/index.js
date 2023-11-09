@@ -8,7 +8,7 @@ import errorHandler from './middlewares/errorHandler.js';
 const app = express();
 const port = process.env.PORT || 8000;
 
-app.use(cors());
+app.use(cors({ exposedHeaders: 'Authorization' }));
 
 app.get('/', (req, res) => res.send('Welcome to the Duck Pond API!'));
 
