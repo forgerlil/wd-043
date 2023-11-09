@@ -1,6 +1,13 @@
 import { useState } from 'react';
+import { useNavigate, Navigate } from 'react-router-dom';
+import axios from 'axios';
+import { toastError, toastSuccess } from '../lib/toastify';
+import { useAuthContext } from '../context/AuthContext';
 
 const Login = () => {
+  const navigate = useNavigate();
+  const { setToken, isAuth } = useAuthContext();
+
   const [form, setForm] = useState({
     email: '',
     password: '',
@@ -11,10 +18,28 @@ const Login = () => {
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
+  const handleLogin = async (e) => {
+    try {
+      e.preventDefault();
+      const { headers } = await axios.post(
+        'https://duckpondapi.onrender.com/auth/login',
+        form
+      );
+      localStorage.setItem('token', headers.authorization);
+      setToken(headers.authorization);
+      toastSuccess('Welcome back!');
+      setTimeout(() => navigate('/'), 1000);
+    } catch (error) {
+      toastError(error.response.data.error);
+    }
+  };
+
+  if (isAuth) return <Navigate to='/' />;
+
   return (
     <div className='mt-[-1px] w-full h-screen flex items-center justify-center'>
       <form
-        onSubmit={(e) => e.preventDefault()}
+        onSubmit={handleLogin}
         autoComplete='off'
         className='flex flex-col items-center justify-between bg-base-300 pt-4 rounded overflow-hidden mx-auto my-0 w-2/3 sm:w-1/2 2xl:w-1/3 transition-all'
       >

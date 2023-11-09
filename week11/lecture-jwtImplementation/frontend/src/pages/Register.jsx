@@ -1,6 +1,13 @@
 import { useState } from 'react';
+import { useNavigate, Navigate } from 'react-router-dom';
+import axios from 'axios';
+import { toastError, toastSuccess } from '../lib/toastify';
+import { useAuthContext } from '../context/AuthContext';
 
 const Register = () => {
+  const navigate = useNavigate();
+  const { setToken, isAuth } = useAuthContext();
+
   const [form, setForm] = useState({
     firstName: '',
     lastName: '',
@@ -13,10 +20,28 @@ const Register = () => {
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
+  const handleRegistration = async (e) => {
+    try {
+      e.preventDefault();
+      const { headers } = await axios.post(
+        'https://duckpondapi.onrender.com/auth/register',
+        form
+      );
+      localStorage.setItem('token', headers.authorization);
+      setToken(headers.authorization);
+      toastSuccess('Welcome to the Duck Pond!');
+      setTimeout(() => navigate('/'), 1000);
+    } catch (error) {
+      toastError(error.response.data.error);
+    }
+  };
+
+  if (isAuth) return <Navigate to='/' />;
+
   return (
     <div className='mt-[-1px] w-full h-screen flex items-center justify-center'>
       <form
-        onSubmit={(e) => e.preventDefault()}
+        onSubmit={handleRegistration}
         autoComplete='off'
         className='flex flex-col items-center justify-between bg-base-300 pt-4 rounded overflow-hidden mx-auto my-0 w-2/3 sm:w-1/2 2xl:w-1/3 transition-all'
       >
