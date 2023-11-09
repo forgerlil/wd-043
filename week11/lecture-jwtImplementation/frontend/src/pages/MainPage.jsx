@@ -9,7 +9,7 @@ const MainPage = () => {
     const fetchData = async () => {
       try {
         const getDuckData = await fetch(
-          'https://duck-pond-server.cyclic.cloud/ducks'
+          'https://duckpondapi.onrender.com/ducks'
         );
         if (!getDuckData.ok)
           throw new Error(

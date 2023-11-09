@@ -11,7 +11,7 @@ const DebuggerDuck = () => {
     (async () => {
       try {
         const { data } = await axios(
-          `https://duck-pond-server.cyclic.cloud/ducks/${duckId}`
+          `https://duckpondapi.onrender.com/ducks/${duckId}`
         );
         setSingleDuck(data);
         setLoading(false);

@@ -2,9 +2,11 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toastSuccess, toastError } from '../lib/toastify';
 import axios from 'axios';
+import { useAuthContext } from '../context/AuthContext';
 
 const AddDuck = () => {
   const navigate = useNavigate();
+  const { token, user } = useAuthContext();
   const [formState, setFormState] = useState({
     duckName: '',
     imgSrc: '',
@@ -33,11 +35,12 @@ const AddDuck = () => {
       if (!isValid) throw new Error('Invalid form');
 
       const { status } = await axios.post(
-        'https://duck-pond-server.cyclic.cloud/ducks',
-        formState
+        'https://duckpondapi.onrender.com/ducks',
+        { ...formState, owner: user._id },
+        { headers: { Authorization: token } }
       );
 
-      if (status === 201) {
+      if (status === 200) {
         toastSuccess('Duck added');
         setTimeout(() => navigate('/'), 1500);
       }
