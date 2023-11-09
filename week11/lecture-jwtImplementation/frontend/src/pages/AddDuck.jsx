@@ -40,7 +40,7 @@ const AddDuck = () => {
         { headers: { Authorization: token } }
       );
 
-      if (status === 200) {
+      if (status === 201) {
         toastSuccess('Duck added');
         setTimeout(() => navigate('/'), 1500);
       }
